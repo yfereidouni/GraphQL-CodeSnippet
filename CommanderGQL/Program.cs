@@ -15,13 +15,18 @@ builder.Services
     .AddGraphQLServer()
     .AddQueryType<Query>()
     .AddMutationType<Mutation>()
+    .AddSubscriptionType<Subscription>()
     .AddType<PlatformType>()
     .AddType<CommandType>()
     .AddFiltering()
     .AddSorting()
-    .AddProjections();
+    .AddProjections()
+    .AddInMemorySubscriptions();
+
 
 var app = builder.Build();
+
+app.UseWebSockets();
 
 app.MapGet("/", () => "Use this links: \r\n\r\nhttps://localhost:7252/graphql\r\nhttps://localhost:7252/graphql-voyager");
 app.MapGraphQL("/graphql");// Checkout Result -> https://localhost:7252/graphql/
