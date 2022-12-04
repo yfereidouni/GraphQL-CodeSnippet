@@ -20,7 +20,7 @@ builder.Services
     .AddType<CommandType>()
     .AddFiltering()
     .AddSorting()
-    .AddProjections()
+    //.AddProjections()
     .AddInMemorySubscriptions();
 
 
