@@ -1,12 +1,7 @@
 using CommanderGQL.Data;
 using CommanderGQL.GraphQL;
 using CommanderGQL.GraphQL.Commands;
-<<<<<<< HEAD
-=======
-using CommanderGQL.GraphQL.Commands;
->>>>>>> develop
 using CommanderGQL.GraphQL.PLatforms;
-using CommanderGQL.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +16,7 @@ builder.Services.AddPooledDbContextFactory<AppDbContext>(opt =>
 builder.Services
     .AddGraphQLServer()
     .AddQueryType<Query>()
+    .AddMutationType<Mutation>()
     .AddType<PlatformType>()
     .AddType<CommandType>()
     .AddFiltering()
