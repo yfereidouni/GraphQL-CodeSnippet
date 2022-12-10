@@ -1,12 +1,7 @@
 using CommanderGQL.Data;
 using CommanderGQL.GraphQL;
 using CommanderGQL.GraphQL.Commands;
-<<<<<<< HEAD
-=======
-using CommanderGQL.GraphQL.Commands;
->>>>>>> develop
 using CommanderGQL.GraphQL.PLatforms;
-using CommanderGQL.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
